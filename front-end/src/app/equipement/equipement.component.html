@@ -1,0 +1,13 @@
+<div class="titre"><strong>Les équipements du club</strong></div>
+<ul *ngFor="let materiel of equipements" class="text">
+  <div class="container">
+    <h4>
+      <strong> {{ materiel.id }} </strong>-- {{ materiel.materiel_type }}
+    </h4>
+    <br />
+    <h5>
+      Quantité du matériel : <strong>{{ materiel.materiel_quantite }}</strong>
+    </h5>
+  </div>
+  <a [routerLink]="[materiel.id]" style="font-size: 18px">Modification</a>
+</ul>

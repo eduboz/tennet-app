@@ -1,0 +1,29 @@
+<div class="titre"><strong>Le personnel du club</strong></div>
+<div class="styleTableau">
+  <div class="tableau">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Numéro personnel</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prénom</th>
+          <th scope="col">Age</th>
+          <th scope="col">Information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let perso of personnels">
+          <th scope="row">
+            {{ perso.id }}
+          </th>
+          <td>
+            {{ perso.personnel_nom }}
+          </td>
+          <td>{{ perso.personnel_prenom }}</td>
+          <td>{{ perso.personnel_age }}</td>
+          <td>{{ perso.personnel_info }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

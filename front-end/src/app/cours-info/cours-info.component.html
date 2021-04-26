@@ -1,0 +1,36 @@
+<div class="titre"><strong>Information sur le cours</strong></div>
+<div class="container">
+  <div class="containerPersonnel">
+    <div class="list row">
+      <div class="col-md-6">
+        <h4><strong>Personnel impliqué</strong></h4>
+        <br />
+        <ul class="list-group">
+          <li class="list-group-item" *ngIf="personnels">
+            Nom : {{ personnels.personnel_nom }} <br />
+            Prénom : {{ personnels.personnel_prenom }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <div class="containerEleve">
+    <div class="list row">
+      <div class="col-md-6">
+        <h4><strong>Elèves du cours</strong></h4>
+        <br />
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let licencie of licencies">
+            Nom : {{ licencie.licencie_nom }} <br />Prénom :
+            {{ licencie.licencie_prenom }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form>
+  <input type="button" class="bouton" value="Retour" onclick="history.go(-1)" />
+</form>

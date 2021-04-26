@@ -1,0 +1,27 @@
+<div class="titre"><strong>Les licenciés du club</strong></div>
+<div class="styleTableau">
+  <div class="tableau">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Numéro licencié</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prénom</th>
+          <th scope="col">Niveau</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let licencie of licencies">
+          <th scope="row">
+            {{ licencie.id }}
+          </th>
+          <td>
+            {{ licencie.licencie_nom }}
+          </td>
+          <td>{{ licencie.licencie_prenom }}</td>
+          <td>{{ licencie.licencie_niveau }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

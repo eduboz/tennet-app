@@ -1,0 +1,9 @@
+<div class="titre"><strong>Les cours du club</strong></div>
+<br />
+<ul *ngFor="let cour of cours" class="text">
+  <div class="container">
+    <strong>{{ cour.cours_id }}</strong> -- {{ cour.cours_jours }} <br />
+    {{ cour.cours_heure }}
+  </div>
+  <a [routerLink]="[cour.cours_id]">Information</a>
+</ul>

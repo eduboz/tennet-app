@@ -1,0 +1,40 @@
+<div class="titre">
+  <h2><strong>Quantité matériels</strong></h2>
+</div>
+<div class="list row">
+  <div
+    *ngIf="equipements"
+    style="
+      margin-top: 1%;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 20px;
+    "
+  >
+    {{ equipements.materiel_type }}
+  </div>
+  <ul class="list-group" style="margin-left: 3%">
+    <li
+      class="list-group-item"
+      style="font-family: 'Courier New', Courier, monospace; font-size: 20px"
+      *ngIf="equipements"
+    >
+      <strong>{{ equipements.materiel_quantite }}</strong>
+    </li>
+  </ul>
+</div>
+
+<div class="boutonModif">
+  <button class="btn btn-success" (click)="updateEquipement(equipements)">
+    Ajout
+  </button>
+  <button
+    class="btn btn-danger"
+    style="margin-left: 3%"
+    (click)="deleteOneEquipement(equipements)"
+  >
+    Retrait
+  </button>
+</div>
+<form>
+  <input type="button" class="bouton" value="Retour" onclick="history.go(-1)" />
+</form>

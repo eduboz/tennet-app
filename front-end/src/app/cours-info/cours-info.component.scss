@@ -1,0 +1,39 @@
+.containerPersonnel {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  align-items: initial;
+  width: 100%;
+}
+
+.containerEleve {
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+  align-items: initial;
+  font-size: 20px;
+  width: 100%;
+}
+
+.titre {
+  border: 1px inset black;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.bouton {
+  width: 10%;
+  height: 30%;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  font-family: Courier New;
+  font-size: 90%;
+  border-radius: 5px;
+  border-color: none;
+  margin-top: 5%;
+  float: right;
+}

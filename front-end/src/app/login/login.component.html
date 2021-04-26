@@ -1,0 +1,38 @@
+<div class="titre">
+  <h2><strong>Authentification</strong></h2>
+</div>
+<div class="col-sm-8 offset-sm-2 mt-2" *ngIf="!authStatus">
+  <form [formGroup]="loginForm">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Ex. Jon" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        placeholder="Ex. Jon"
+        formControlName="password"
+      />
+    </mat-form-field>
+    <button
+      color="blue"
+      [disabled]="!loginForm.valid"
+      (click)="onLogin()"
+      mat-raised-button
+    >
+      Connexion
+    </button>
+
+    <div *ngIf="loggedFailed">
+      <div class="alert alert-danger" role="alert">
+        Login failed : {{ errorMessage }}
+      </div>
+    </div>
+  </form>
+</div>
+
+<button class="btn btn-danger" *ngIf="authStatus" (click)="onSignOut()">
+  Déconnexion
+</button>

@@ -1,0 +1,68 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark"
+  style="font-family: 'Courier New', Courier, monospace; font-size: 18px"
+>
+  <a class="nav-item nav-link" routerLink="accueil" routerLinkActive="active"
+    >Accueil</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarText"
+    aria-controls="navbarText"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <a
+        class="nav-item nav-link"
+        routerLink="personnel"
+        routerLinkActive="active"
+        style="margin-left: 10px"
+      >
+        Personnel(s)
+      </a>
+      <a
+        class="nav-item nav-link"
+        routerLink="equipement"
+        routerLinkActive="active"
+        style="margin-left: 10px"
+      >
+        Equipement(s)
+      </a>
+      <a
+        class="nav-item nav-link"
+        routerLink="licencie"
+        routerLinkActive="active"
+        style="margin-left: 10px"
+      >
+        Licencié(s)
+      </a>
+      <a
+        class="nav-item nav-link"
+        routerLink="cours"
+        routerLinkActive="active"
+        style="margin-left: 10px"
+      >
+        Cours
+      </a>
+    </ul>
+    <div class="navbar-right" *ngIf="!isLoggedIn">
+      <a class="nav-item nav-link" routerLink="login" routerLinkActive="active">
+        Connexion
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

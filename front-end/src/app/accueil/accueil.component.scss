@@ -1,0 +1,57 @@
+.en-tete {
+  text-align: center;
+  font-family: Courier New;
+}
+
+.container {
+  margin-top: 100px;
+  width: 40%;
+  height: 500px;
+  background-color: #237d89;
+  border-radius: 15px;
+  align-content: center;
+  font-family: Courier New;
+  float: left;
+  font-size: 20px;
+}
+
+.containerbis {
+  margin-top: 100px;
+  width: 40%;
+  height: 500px;
+  background-color: #237d89;
+  border-radius: 15px;
+  align-content: center;
+  font-family: Courier New;
+  float: right;
+  text-align: center;
+}
+
+.text {
+  margin-left: 50px;
+  margin-top: 100px;
+}
+
+.bouton {
+  width: 30%;
+  height: 12%;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  font-family: Courier New;
+  font-size: 90%;
+  border-radius: 5px;
+  border-color: none;
+  display: flex;
+  flex-direction: column;
+  margin-left: 35%;
+}
+
+.btn {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  //margin: 1em;
+}
