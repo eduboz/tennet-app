@@ -3,16 +3,13 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
 import { Routes, RouterModule } from '@angular/router';
 import { AuthService } from './services/auth.services';
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
 import { AuthGuard } from './services/auth-guard.services';
 import { AccueilComponent } from './accueil/accueil.component';
 import { EquipementComponent } from './equipement/equipement.component';
@@ -64,7 +61,7 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'login', component: LoginComponent },
-  { path: '', pathMatch: 'full', redirectTo: '/login' },
+  { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
   { path: '**', redirectTo: 'not-found' },
 ];
 

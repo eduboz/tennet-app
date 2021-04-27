@@ -1,0 +1,74 @@
+drop table if exists licencie;
+drop table if exists admin;
+drop table if exists materiel;
+drop table if exists licencie;
+drop table if exists personnel;
+drop table if exists cours;
+
+create table admin (
+    admin_id integer not null primary key auto_increment,
+	admin_login varchar(100) not null,
+admin_mail varchar(100) not null,
+    admin_mdp varchar(100) not null
+	
+);
+
+create table licencie (
+    id integer not null primary key auto_increment,
+	licencie_nom varchar(100) not null,
+    licencie_prenom varchar(100) not null,
+	licencie_niveau varchar(100) not null
+);
+
+create table materiel (
+    id integer not null primary key auto_increment,
+	materiel_type varchar(100) not null,
+    materiel_quantite integer not null
+);
+
+create table personnel (
+    id integer not null primary key auto_increment,
+	personnel_nom varchar(100) not null,
+    personnel_prenom varchar(100) not null,
+	personnel_info varchar(100) not null,
+    personnel_age integer not null
+);
+
+create table cours (
+  
+    cours_id integer not null primary key auto_increment,
+
+    cours_heure varchar(100) not null,
+	cours_jours varchar(100) not null,
+    personnel_id integer not null,
+	foreign key (personnel_id) references personnel(id),
+licencie_niv varchar(100) not null
+	
+);
+
+insert into admin values(1, 'eduboz','eduboz@test.com', 'secret');
+insert into licencie values(1, 'Garlatti','Laura', 'Intermédiaire');
+ insert into licencie values(2, 'Vilayleck','Elise', 'Intermédiaire');
+ insert into licencie values(3, 'Desclaux','Nicolas', 'Débutant'); 
+ insert into licencie values(4, 'Duboz','Emma', 'Débutant');
+insert into licencie values(5, 'Chauvier','Nathan', 'Débutant'); 
+ insert into licencie values(6, 'Juaneda','Julie', 'Intermédiaire');
+
+
+insert into materiel values (1, 'Filet', 10);
+insert into materiel values (2, 'Raquette Junior', 10);
+insert into materiel values (3, 'Raquette XL', 10);
+insert into materiel values (4, 'Raquette standard', 10);
+insert into materiel values (5, 'Balle standard', 10);
+insert into materiel values (6, 'Balle junior', 10);
+insert into materiel values(7, 'Strap raquette', 10);
+
+insert into personnel values (1, 'Dupont', 'Yves', '…',24 );
+insert into personnel values (2, 'Dupuy', 'Arnaud', '…',32);
+insert into personnel values (3, 'Ipe', 'Stéphane', '…',36);
+insert into personnel values (4, 'Tolouy', 'Bernadette', '…',46);
+
+INSERT INTO `cours` (`cours_id`, `cours_heure`, `cours_jours`, `personnel_id`, `licencie_niv`) VALUES ('1', '14h30 ', 'Lundi', '1', 'Débutant');
+INSERT INTO `cours` (`cours_id`, `cours_heure`, `cours_jours`, `personnel_id`, `licencie_niv`) VALUES ('2', '16h30 ', 'Lundi', '2', 'Débutant');
+INSERT INTO `cours` (`cours_id`, `cours_heure`, `cours_jours`, `personnel_id`, `licencie_niv`) VALUES ('3', '14h30 ', 'Mardi', '1', 'Intermédiaire');
+INSERT INTO `cours` (`cours_id`, `cours_heure`, `cours_jours`, `personnel_id`, `licencie_niv`) VALUES ('4', '16h30 ', 'Mercredi', '3', 'Débutant');
